@@ -1,0 +1,6 @@
+function spinalCase(str) {
+
+  return str.replace(/\s|_/g, "-").replace(/\B(?=[A-Z])/g, "-").toLowerCase();
+}
+
+spinalCase("AllThe-small Things");
