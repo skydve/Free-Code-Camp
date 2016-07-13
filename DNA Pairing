@@ -1,0 +1,25 @@
+function pairElement(str) {
+  var result = [];
+  str.split('').forEach(function(elem) {
+    var dna = [];
+    dna.push(elem);
+    switch (elem) {
+      case "C":
+        dna.push("G");
+        break;
+      case "G":
+        dna.push("C");
+        break;
+      case "A":
+        dna.push("T");
+        break;
+      case "T":
+        dna.push("A");
+        break;
+    }
+    result.push(dna);
+  });
+  return result;
+}
+
+pairElement("GCG");
