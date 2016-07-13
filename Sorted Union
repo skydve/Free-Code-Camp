@@ -1,0 +1,16 @@
+
+function uniteUnique(arr) {
+  var array = [];
+  var finalArray = [];
+  for (var i = 0; i < arguments.length; i++) {
+    array = array.concat(arguments[i]);
+  }
+  for (var j = 0; j < array.length; j++) {
+    if (!finalArray.includes(array[j])) {
+       finalArray.push(array[j]);     
+    }
+  }
+  return finalArray;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
