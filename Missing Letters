@@ -1,0 +1,13 @@
+function fearNotLetter(str) {
+  var charCode = str.charCodeAt(0);
+  var missed = undefined;
+  str.split('').forEach(function(val) {
+    if (val.charCodeAt(0) - charCode > 1) {
+      missed = String.fromCharCode(val.charCodeAt(0)-1);
+    }
+    charCode = val.charCodeAt(0);
+  });
+  return missed;
+}
+
+fearNotLetter("yz");
