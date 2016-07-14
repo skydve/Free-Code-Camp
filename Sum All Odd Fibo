@@ -1,0 +1,15 @@
+function sumFibs(num) {
+ var iCur = 1;
+ var iPrev = 1;
+ var sum = 2;
+ while ((iCur+iPrev) <= num) {
+   iCur += iPrev;
+   iPrev = iCur - iPrev;
+   if (iCur%2 !== 0) {
+     sum += iCur;
+   }   
+ }
+  return sum;
+}
+
+sumFibs(10);
