@@ -1,0 +1,19 @@
+function smallestCommons(arr) {
+  var trigger = false,
+      result = 0,
+      i = 0,
+      range = [3, 4, 5], //sorted
+      r = [3, 4, 5]; //copy of range
+  while (range[0] !== range[range.length]) {  // while first == the last
+    range[i] += r[i];
+    if ()
+  }
+  
+  
+  
+  return result;
+  
+}
+
+
+smallestCommons([3,5]);
