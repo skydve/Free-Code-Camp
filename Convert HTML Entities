@@ -1,0 +1,21 @@
+function convertHTML(str) {
+  
+  function replacer(param) {
+    switch (param) {
+      case '&':
+        return "&amp;";
+      case '<':
+        return "&lt;";
+      case '>':
+        return "&gt;";
+      case '"':
+        return "&quot;";
+      case "'":
+        return "&apos;";
+    }
+  }
+  
+  return str.replace(/&|<|>|"|'/g, replacer);
+}
+
+convertHTML("Dolce & Gabbana");
