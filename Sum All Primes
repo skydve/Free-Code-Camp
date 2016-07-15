@@ -1,0 +1,23 @@
+function sumPrimes(num) {
+  
+  function ifPrime(num) {
+    for (var i = 2; i < num; i++) {
+      if (num%i === 0) {
+        return false;
+      }     
+    }
+    return true;
+  }
+  
+  var sum = 0;
+  
+  for (var i = 2; i <= num; i++) {
+    if (ifPrime(i)) {
+      sum += i;
+    }
+  }
+  
+  return sum;
+}
+
+sumPrimes(8);
