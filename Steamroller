@@ -1,0 +1,21 @@
+function steamrollArray(arr) {
+  
+  var result = [];
+  
+  function roll(arg) {
+      if (Array.isArray(arg)) {
+        arg.forEach(function(elem) {
+          return roll(elem);
+        });
+      } else {
+        result.push(arg);
+      } 
+  }
+  
+  roll(arr);
+  
+ 
+  return result;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
